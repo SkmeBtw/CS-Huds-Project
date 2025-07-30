@@ -1,4 +1,4 @@
-# CS:SOURCE OFFENSIVE - Modding Using Android
+# CS:SOURCE OFFENSIVE - Custom Huds Using Android
 
 This project shows how to install and use HUD (Heads-Up Display) mods for Counter-Strike: Source Offensive on Android using the source engine or similar methods.
 
