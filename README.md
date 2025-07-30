@@ -57,4 +57,7 @@ If you have your own HUD mod or improvement, you’re welcome to fork the repo a
 # Contact
 
 For issues or questions, open an issue on this repository.
-or contact me in my official discord https://discord.gg/jM7wtPDEcB
+or contact me in my official discord
+Social links
+Discord: https://discord.gg/jM7wtPDEcB
+YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
