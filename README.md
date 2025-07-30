@@ -1,10 +1,10 @@
-# CS:SOURCE OFFENSIVE - CSMOS Modding Using Android
+# CS:SOURCE OFFENSIVE - Modding Using Android
 
 This project shows how to install and use HUD (Heads-Up Display) mods for Counter-Strike: Source Offensive on Android using the source engine or similar methods.
 
-# About
+# About / Description
 
-This guide is for Android users who want to customize their CS:Source Offensive experience. Mods are applied directly through the file system without needing a PC.
+This guide is for Android users who want to customize their CS:Source Offensive experience. Mods are applied directly through the file system without needing a PC. I can also help you modding in my discord channel. 
 
 # Preview
 
@@ -14,7 +14,7 @@ Screenshot 1 - In progress/Absolute (Not fully completed)
 Screenshot 2 -Discontinued
 ![image alt](https://github.com/SkmeBtw/CS-Huds-Project/blob/0d5799071e8e411edec3a840dae578ebf8406613/Screenshot_20250730-223733_copy_1920x1080.jpg)
 
-Screenshot 3 - In progress
+Screenshot 3 - In progress (The new Idea you can check the issue why) 
 ![image alt](https://github.com/SkmeBtw/CS-Huds-Project/blob/511cf3cadcee67aa75fc5c5fdb57edcb46db8988/images%20(2).jpeg)
 
 They look Bad but It's still in development
@@ -29,9 +29,6 @@ They look Bad but It's still in development
 
 CSSO VERSION
 /storage/emulated/0/srceng/csso/custom
-
-CSMOS VERSION
-/storage/emulated/0/srceng/csmos/custom
 
 4. Open or create a folder named custom inside the cstrike folder.
 
