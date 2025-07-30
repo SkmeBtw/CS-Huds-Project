@@ -6,6 +6,12 @@ This project shows how to install and use HUD (Heads-Up Display) mods for Counte
 
 This guide is for Android users who want to customize their CS:Source Offensive experience. Mods are applied directly through the file system without needing a PC.
 
+# Preview
+
+Screenshot 1
+
+Screenshot 2
+
 # How to Install
 
 1. Download a HUD mod.
