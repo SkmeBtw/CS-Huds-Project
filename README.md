@@ -8,11 +8,14 @@ This guide is for Android users who want to customize their CS:Source Offensive 
 
 # Preview
 
-Screenshot 1
+Screenshot 1 - In progress/Absolute (Not fully completed)
 ![image alt](https://github.com/SkmeBtw/CS-Huds-Project/blob/0d5799071e8e411edec3a840dae578ebf8406613/snip_1000165793.jpg)
 
-Screenshot 2
+Screenshot 2 -Discontinued
 ![image alt](https://github.com/SkmeBtw/CS-Huds-Project/blob/0d5799071e8e411edec3a840dae578ebf8406613/Screenshot_20250730-223733_copy_1920x1080.jpg)
+
+Screenshot 3 - In progress
+![image alt](https://github.com/SkmeBtw/CS-Huds-Project/blob/511cf3cadcee67aa75fc5c5fdb57edcb46db8988/images%20(2).jpeg)
 
 They look Bad but It's still in development
 
