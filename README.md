@@ -60,6 +60,11 @@ For issues or questions, open an issue on this repository.
 or contact me in my official discord
 Social links
 
+# Credits List
+
+Viktor - Porter of the Molotov
+ZooL - Owner of the Molotov
+
 DISCORD: https://discord.gg/jM7wtPDEcB
 
 YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
