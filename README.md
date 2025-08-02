@@ -57,7 +57,7 @@ If you have your own HUD mod or improvement, you’re welcome to fork the repo a
 
 # Credits List
 
-Viktor - Porter of the Molotov
+Viktor - Porter of the Molotov, 
 ZooL - Owner of the Molotov
 
 
