@@ -54,17 +54,18 @@ Some mods may not work with every version or device.
 
 If you have your own HUD mod or improvement, you’re welcome to fork the repo and submit a pull request.
 
+
+# Credits List
+
+Viktor - Porter of the Molotov
+ZooL - Owner of the Molotov
+
+
 # Contact
 
 For issues or questions, open an issue on this repository.
 or contact me in my official discord
 Social links
-
-# Credits List
-
-Viktor - Porter of the Molotov
-
-ZooL - Owner of the Molotov
 
 DISCORD: https://discord.gg/jM7wtPDEcB
 
