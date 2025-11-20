@@ -28,7 +28,7 @@ They look Bad but It's still in development
 3. Navigate to your game directory, usually located at:
 
 CSSO VERSION
-/storage/emulated/0/srceng/csso/custom
+counter-strike source/csso/custom
 
 4. Open or create a folder named custom inside the cstrike folder.
 
@@ -39,7 +39,7 @@ CSSO VERSION
 
 # Purpose
 
-The goal of this project is to make HUD modding simple and accessible for mobile users. It helps players change the in-game interface using only their Android device. (It's not easy for me) 
+The goal of this project is to make HUD modding simple and accessible for users. It helps players change the in-game interface using only their Android device. (It's not easy for me) 
 
 # Disclaimer
 
@@ -54,13 +54,6 @@ Some mods may not work with every version or device.
 
 If you have your own HUD mod or improvement, you’re welcome to fork the repo and submit a pull request.
 
-
-# Credits List
-
-Viktor - Porter of the Molotov, 
-ZooL - Owner of the Molotov
-
-
 # Contact
 
 For issues or questions, open an issue on this repository.
@@ -72,6 +65,7 @@ DISCORD: https://discord.gg/jM7wtPDEcB
 YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
 
 # How to make my own Hud?
+
 Creating Custom Panels, Buttons, & Layouts Using .res Files (Source Engine VGUI2)
 
 This guide teaches you how to build custom UI elements in Counter-Strike: Source Offensive using VGUI2 Resource Files (.res).
@@ -321,37 +315,90 @@ ClientScheme.res
 9. Tips for Clean UI
 
 Use ClientScheme.res to define custom fonts & colors
-
 Keep spacing consistent (20–40px padding)
-
 Use bgcolor_override for fast coloring
-
 Test UI changes by restarting the game or using reloadscheme
 
 ---
 
 10. Ready-Made Example Repository Structure
-
 CSSO-VGUI2-Tutorial/
- ├── README.md
+ ├── csso
  └── ui/
       ├── MainMenu.res
       ├── ClientScheme.res
       └── example_logo/
             ├── cssologo.vtf
             └── cssologo.vmt
-
-
 ---
 
 Want me to generate the FULL repository?
 
 I can generate:
-
 Full README.md
 Ready-to-use .res files
 Full UI theme (dark, neon, vaporwave, minimalistic)
 Optional custom logo files
 Auto-install instructions
+# How to make Fonts(textslabels)/Panels have different colors? 
+
+1. Main Menu File (ClientScheme/VGUI)
+CSSO uses the same menu file as CS:S:
+resource/GameMenu.res
+To add your own panel area and text, you edit or create:
+resource/UI/MainMenu.res
+
+---
+
+2. Add a Panel + Label (VGUI .res format)
+resource/UI/MainMenu.res
+
+"MainMenu"
+{
+    "MyCustomPanel"
+    {
+        "ControlName"   "Panel"
+        "fieldName"     "MyCustomPanel"
+        "xpos"          "c-200"
+        "ypos"          "c-100"
+        "wide"          "400"
+        "tall"          "200"
+        "visible"       "1"
+        "enabled"       "1"
+        "paintbackground" "1"
+        "bgcolor_override" "0 0 0 150"
+    }
+
+    "MyCustomLabel"
+    {
+        "ControlName"   "Label"
+        "fieldName"     "MyCustomLabel"
+        "xpos"          "c-180"
+        "ypos"          "c-80"
+        "wide"          "360"
+        "tall"          "40"
+        "visible"       "1"
+        "enabled"       "1"
+        "labelText"     "Hello from CSSO"
+        "textAlignment" "center"
+        "fgcolor_override" "255 255 255 255"
+        "font"          "Trebuchet24"
+    }
+}
+
+This creates:
+A centered panel with a transparent dark background
+A centered label with white text inside it
+
+---
+
+3. File Placement
+
+Make sure these files exist in CSSO’s directory structure:
+css_offensive/custom/<your_mod_name>/resource/UI/MainMenu.res
+css_offensive/custom/<your_mod_name>/resource/ClientScheme.res
+If you don’t use a custom folder, put it directly:
+css_offensive/resource/UI/MainMenu.res
+Restart the game after changes.
 
 
