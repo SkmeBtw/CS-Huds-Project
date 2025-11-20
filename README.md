@@ -70,3 +70,288 @@ Social links
 DISCORD: https://discord.gg/jM7wtPDEcB
 
 YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
+
+# How to make my own Hud?
+Creating Custom Panels, Buttons, & Layouts Using .res Files (Source Engine VGUI2)
+
+This guide teaches you how to build custom UI elements in Counter-Strike: Source Offensive using VGUI2 Resource Files (.res).
+No HTML. No Lua. No Derma. Pure Source Engine UI.
+
+---
+
+1. Folder Structure
+Place your UI files inside:
+cstrike/
+ └── resource/
+      └── ui/
+          ├── MainMenu.res
+          ├── ClientScheme.res
+          └── ...
+
+Any file placed here overrides the game’s original .res.
+
+---
+
+2. Understanding .res Files
+
+A .res file uses KeyValues to define UI:
+Panels
+Buttons
+Labels
+Images
+Colors
+Fonts
+Layout (xpos, ypos, wide, tall)
+
+
+There is no scripting, only declarative UI layout.
+
+---
+
+3. Example: Custom Main Menu UI
+
+Create:
+cstrike/resource/ui/MainMenu.res
+Paste the following:
+"Resource/UI/MainMenu.res"
+{
+    "MainMenu"
+    {
+        "fieldName"        "MainMenu"
+        "visible"          "1"
+        "enabled"          "1"
+        "xpos"             "0"
+        "ypos"             "0"
+        "wide"             "f0"
+        "tall"             "f0"
+
+        // Background Panel
+        "BackgroundPanel"
+        {
+            "ControlName"       "Panel"
+            "fieldName"         "BackgroundPanel"
+            "xpos"              "0"
+            "ypos"              "0"
+            "wide"              "f0"
+            "tall"              "f0"
+            "bgcolor_override"  "20 20 20 255"
+        }
+
+        // PLAY Button
+        "PlayButton"
+        {
+            "ControlName"       "Button"
+            "fieldName"         "PlayButton"
+            "xpos"              "c-100"
+            "ypos"              "200"
+            "wide"              "200"
+            "tall"              "40"
+
+            "labelText"         "PLAY"
+            "font"              "MenuLarge"
+            "fgcolor"           "255 255 255 255"
+            "bgcolor_override"  "50 120 255 255"
+
+            "command"           "engine playdemo menu_startup"
+        }
+
+        // SETTINGS Button
+        "SettingsButton"
+        {
+            "ControlName"       "Button"
+            "fieldName"         "SettingsButton"
+            "xpos"              "c-100"
+            "ypos"              "250"
+            "wide"              "200"
+            "tall"              "40"
+
+            "labelText"         "SETTINGS"
+            "font"              "MenuLarge"
+            "fgcolor"           "255 255 255 255"
+            "bgcolor_override"  "60 60 60 255"
+
+            "command"           "optionsdialog"
+        }
+
+        // QUIT Button
+        "QuitButton"
+        {
+            "ControlName"       "Button"
+            "fieldName"         "QuitButton"
+            "xpos"              "c-100"
+            "ypos"              "300"
+            "wide"              "200"
+            "tall"              "40"
+
+            "labelText"         "QUIT"
+            "font"              "MenuLarge"
+            "fgcolor"           "255 255 255 255"
+            "bgcolor_override"  "180 30 30 255"
+
+            "command"           "quit"
+        }
+    }
+}
+
+This creates:
+
+A full-screen dark background
+
+A centered PLAY button
+
+Settings and Quit buttons
+
+Styled entirely via .res
+
+---
+
+4. Adding a Custom Logo
+
+Add this inside MainMenu.res:
+
+"GameLogo"
+{
+    "ControlName" "ImagePanel"
+    "fieldName"   "GameLogo"
+    "xpos"        "c-128"
+    "ypos"        "50"
+    "wide"        "256"
+    "tall"        "128"
+    "image"       "vgui/cssologo"
+    "scaleImage"  "1"
+}
+
+Place your materials:
+
+cstrike/materials/vgui/cssologo.vtf
+cstrike/materials/vgui/cssologo.vmt
+
+Minimal .vmt:
+
+"UnlitGeneric"
+{
+    "$basetexture" "vgui/cssologo"
+    "$translucent" "1"
+}
+
+---
+
+5. Creating Custom Panels
+
+You can customize UI modules by defining your own reusable panels.
+
+Example:
+
+"SidePanel"
+{
+    "ControlName" "Panel"
+    "fieldName"   "SidePanel"
+    "xpos"        "0"
+    "ypos"        "0"
+    "wide"        "300"
+    "tall"        "f0"
+    "bgcolor_override" "30 30 30 255"
+
+    "SideLabel"
+    {
+        "ControlName" "Label"
+        "fieldName"   "SideLabel"
+        "xpos"        "10"
+        "ypos"        "10"
+        "wide"        "280"
+        "tall"        "30"
+        "labelText"   "CSSO PANEL"
+        "font"        "MenuLarge"
+        "fgcolor"     "255 255 255 255"
+    }
+}
+
+You can insert this panel anywhere in MainMenu or other UI files.
+
+---
+
+6. Useful Positioning Values
+
+VGUI2 supports special keywords:
+
+Value	Meaning
+100	Absolute pixels
+c-50	Centered minus 50px
+c0	Centered exactly
+f0	Fill parent (full width/height)
+cs-0.5	Center scaled
+
+Example of centering a panel:
+
+"xpos" "c-150"
+"ypos" "c-50"
+
+---
+
+⚠ 7. Limitations of .res
+
+.res cannot:
+run scripts
+animate
+detect mouse hover
+change colors dynamically
+move UI dynamically
+display HTML
+They are static UI layouts only.
+
+---
+
+8. Recommended Files to Edit in CSSO
+
+You can modify any of these:
+
+MainMenu.res
+OptionsDialog.res
+ScoreBoard.res
+Loading.res
+HudLayout.res
+HudPlayerHealth.res
+HudWeaponSelection.res
+TeamMenu.res
+BuyMenu.res
+ClientScheme.res
+
+---
+
+9. Tips for Clean UI
+
+Use ClientScheme.res to define custom fonts & colors
+
+Keep spacing consistent (20–40px padding)
+
+Use bgcolor_override for fast coloring
+
+Test UI changes by restarting the game or using reloadscheme
+
+---
+
+10. Ready-Made Example Repository Structure
+
+CSSO-VGUI2-Tutorial/
+ ├── README.md
+ └── ui/
+      ├── MainMenu.res
+      ├── ClientScheme.res
+      └── example_logo/
+            ├── cssologo.vtf
+            └── cssologo.vmt
+
+
+---
+
+Want me to generate the FULL repository?
+
+I can generate:
+
+Full README.md
+Ready-to-use .res files
+Full UI theme (dark, neon, vaporwave, minimalistic)
+Optional custom logo files
+Auto-install instructions
+
+
