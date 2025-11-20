@@ -364,6 +364,7 @@ resource/UI/MainMenu.res
         "paintbackground" "1"
         "bgcolor_override" "0 0 0 150"
     }
+}
 
     "MyCustomLabel"
     {
@@ -381,6 +382,12 @@ resource/UI/MainMenu.res
         "font"          "Trebuchet24"
     }
 }
+
+The Colorable Sets:
+"paintbackground" "0/1"
+"bgcolor_override" "0 0 0 0" = Panels,vtf.
+"fgcolor_override" "0 0 0 0" = Texts, Messages. 
+Format: #RRGGBB or #RRGGBBAA (Red, Green, Blue, Alpha).
 
 This creates:
 A centered panel with a transparent dark background
