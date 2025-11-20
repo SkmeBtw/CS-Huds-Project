@@ -60,7 +60,7 @@ For issues or questions, open an issue on this repository.
 or contact me in my official discord
 Social links
 
-DISCORD: https://discord.gg/jM7wtPDEcB
+DISCORD: https://discord.gg/53FtSXf7BU
 
 YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
 
