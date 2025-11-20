@@ -400,6 +400,7 @@ A centered label with white text inside it
 Make sure these files exist in CSSO’s directory structure:
 css_offensive/custom/<your_mod_name>/resource/UI/MainMenu.res
 css_offensive/custom/<your_mod_name>/resource/ClientScheme.res
+css_offensive/custom/<your_mod_name>/resource/sourcescheme.res
 If you don’t use a custom folder, put it directly:
 css_offensive/resource/UI/MainMenu.res
 Restart the game after changes.
