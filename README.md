@@ -64,6 +64,8 @@ DISCORD: https://discord.gg/jM7wtPDEcB
 
 YOUTUBE: https://youtube.com/@st4nd9?si=GXODhwiduOtT6GB6
 
+=================================================
+
 # How to make my own Hud?
 
 Creating Custom Panels, Buttons, & Layouts Using .res Files (Source Engine VGUI2)
@@ -330,18 +332,12 @@ CSSO-VGUI2-Tutorial/
       └── example_logo/
             ├── cssologo.vtf
             └── cssologo.vmt
----
 
-Want me to generate the FULL repository?
+================================================
 
-I can generate:
-Full README.md
-Ready-to-use .res files
-Full UI theme (dark, neon, vaporwave, minimalistic)
-Optional custom logo files
-Auto-install instructions
-# How to make Fonts(textslabels)/Panels have different colors? 
+# How to make Fonts(textslabels)/Panels
 
+have different colors?
 1. Main Menu File (ClientScheme/VGUI)
 CSSO uses the same menu file as CS:S:
 resource/GameMenu.res
@@ -400,5 +396,7 @@ css_offensive/custom/<your_mod_name>/resource/ClientScheme.res
 If you don’t use a custom folder, put it directly:
 css_offensive/resource/UI/MainMenu.res
 Restart the game after changes.
+
+=================================================
 
 
